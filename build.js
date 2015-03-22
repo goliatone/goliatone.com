@@ -8,9 +8,9 @@ var templates = require('metalsmith-templates');
 var snippet = require('metalsmith-snippet');
 var define = require('metalsmith-define');
 var appendMetadata = require('./lib/appendMetadata');
-
+var assets = require('metalsmith-assets');
 var each = require('metalsmith-each');
-
+var css = require('metalsmith-clean-css');
 
 var Handlebars = require('handlebars');
 var moment = require('moment');
@@ -78,6 +78,18 @@ Librarian(__dirname)
     }))
 
     .use(templates('handlebars'))
+
+    .use(assets({
+        source: './public',
+        destination: './assets'
+    }))
+
+    .use(css({
+        files: '**/*.css',
+        cleanCSS: {
+            rebase: true
+        }
+    }))
 
     .clean(true)
     .destination('./site')
