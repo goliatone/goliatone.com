@@ -1,17 +1,13 @@
 {{> header}}
-
+{{> header-title}}
 <main>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h3 class="text-center u-vs">#{{tag}}</h3>
-        </div>
-    </div>
+    <h2 class="text-center u-vs">Tag: #{{tag}}</h2>
 
-    <div class="row">
-        {{#each posts}}
-            {{> posts-list-item }}
-        {{/each}}
-    </div>
+
+    {{#each posts}}
+        {{> posts-list-item }}
+    {{/each}}
+
 </main>
 
 {{> footer }}
