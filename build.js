@@ -12,16 +12,22 @@ var assets = require('metalsmith-assets');
 var each = require('metalsmith-each');
 var css = require('metalsmith-clean-css');
 
-var Handlebars = require('handlebars');
-var moment = require('moment');
-Handlebars.registerHelper('shortDate', function(date){
-    return moment(date).utc().format('MMM D, YYYY');
-});
 
-require('./lib/hbs-partials')();
+var watch = require('metalsmith-watch');
+var serve = require('metalsmith-serve');
+
+require('./lib/hbs-partials')({
+    partials:'_partials'
+});
 
 
 var datePattern = 'YYYY/MM/DD';
+
+var externalWatch = require('metalsmith-external-watch');
+externalWatch(build);
+build();
+
+function build(){
 
 Librarian(__dirname)
     .source('src')
@@ -39,6 +45,23 @@ Librarian(__dirname)
             }
         },
         // moment: moment
+    }))
+
+    .metadata({
+        site: {
+            title: "Notes",
+            subtitle:"To self and beyond",
+            description: "Goliatone blog on technology and rumbles"
+        },
+        uri:"http://goliatone.com",
+        googleAnalytics:'UX-1234567-A'
+    })
+    .use(each(function(file, filename){
+        if(filename.indexOf('txt') !== -1) return filename.replace('txt', 'md');
+    }))
+    .use(each(function(file, filename){
+        if(file.template === 'article.html') file.template = 'post.hbs';
+        if(!file.template) file.template = 'post.hbs';
     }))
     .use(each(function(file, filename){
         if(! file.hasOwnProperty('author')) file.author = 'Goliatone';
@@ -58,7 +81,7 @@ Librarian(__dirname)
     .use(tags({
         handle  : 'tags',
         path    : 'blog/tags',
-        template: './blog-tag.hbs',
+        template: './blog/tag.hbs',
         sortBy  : 'date',
         reverse : true
     }))
@@ -78,7 +101,7 @@ Librarian(__dirname)
     }))
 
     .use(templates('handlebars'))
-
+    //metalsmith-static
     .use(assets({
         source: './public',
         destination: './assets'
@@ -91,8 +114,18 @@ Librarian(__dirname)
         }
     }))
 
+    // .use(watch({
+    //     pattern : '**/*',
+    //     livereload: true
+    // }))
+    .use(serve({
+        port: 9494,
+        verbose: true
+    }))
+
     .clean(true)
     .destination('./site')
     .build(function(err){
         if(err) throw err;
     });
+}
