@@ -73,7 +73,7 @@ Librarian(__dirname)
             reverse: true
         },
         projects: {
-            pattern: 'projects/_posts/*.html',
+            pattern: 'projects/_posts/*.md',
             sortBy: 'date',
             reverse: true
         }
