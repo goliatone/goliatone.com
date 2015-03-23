@@ -11,7 +11,7 @@ var appendMetadata = require('./lib/appendMetadata');
 var assets = require('metalsmith-assets');
 var each = require('metalsmith-each');
 var css = require('metalsmith-clean-css');
-
+var highlight = require('highlight.js');
 
 var watch = require('metalsmith-watch');
 var serve = require('metalsmith-serve');
@@ -90,7 +90,20 @@ Librarian(__dirname)
         datePattern: datePattern
     }))
 
-    .use(markdown())
+    .use(markdown({
+        gfm: true,
+        tables: true,
+        langPrefix:'hljs lang-',
+        highlight: function(code, lang){
+            if(!lang) return code;
+            try {
+                return highlight.highlight(lang, code).value;
+            } catch(e){
+                console.error('ERROR', e);
+                return code;
+            }
+        }
+    }))
     .use(permalinks({
         pattern: ':collection/:date/:title',
         date: datePattern
