@@ -1,0 +1,8 @@
+{{> header}}
+{{#each collections.projects}}
+    {{#if this.skip_index }}
+    {{ else}}
+        {{> project-list-item }}
+    {{/if}}
+{{/each}}
+{{> footer}}
