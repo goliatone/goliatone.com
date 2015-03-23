@@ -3,13 +3,13 @@ Short intro to post, used in lists.
 -->
 <article>
     <header>
-        <h3>
-            <a href="{{this.url}}" alt="{{this.title}}" title="{{ this.title }}">{{this.title}}</a>
-        </h3>
+        <a href="{{this.url}}" alt="{{this.title}}" title="{{ this.title }}">
+            <h2>{{this.title}}</h2>
+        </a>
         <time datetime="{{this.date}}">{{shortDate this.date}}</time>
     </header>
 
-    {{#if this.tags}}
+    {{!-- {{#if this.tags}}
     <p class="post-meta">
         under
         {{#each this.tags}}
@@ -18,12 +18,13 @@ Short intro to post, used in lists.
             </span>
         {{/each}}
     </p>
-    {{/if}}
+    {{/if}} --}}
 
     <div class="post-body">
         {{{this.snippet}}}
         </br>
         <a href="{{this.url}}">Read more</a>
+        <hr/>
     </div>
 
 </<article>
