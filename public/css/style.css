@@ -64,6 +64,14 @@ main > header {
     margin:40px 0 20px 0;
 }
 
+/*BLOG > POST > META*/
+.post-meta{
+    height:30px;
+}
+.post-meta p{
+    float:right;
+    clear:both;
+}
 /*BLOG > POST > ARTICLES list*/
 section.article-list{
     padding-top:30px;
@@ -170,7 +178,7 @@ article .post-body{
 }
 
 article .post-body hr {
-    margin-top:10px;
+    margin-top:20px;
     width:100px;
     border-bottom:0px;
 }
