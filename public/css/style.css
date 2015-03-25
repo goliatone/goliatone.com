@@ -63,14 +63,35 @@ main > header {
     text-align: center;
     margin:40px 0 20px 0;
 }
-
+/*LOGO*/
+.logo {
+    position: absolute;
+    top:50px;
+    left:50px;
+}
+.logo img{
+    width:60%;
+}
+/*BLOG > POST*/
+hr.divider {
+    margin-top:30px;
+    margin-bottom:50px;
+    width:100px;
+    border-bottom:0px;    
+}
 /*BLOG > POST > META*/
 .post-meta{
-    height:30px;
+    height:40px;
 }
 .post-meta p{
     float:right;
-    clear:both;
+    padding-right:10px;
+    font-size:0.93em;
+}
+
+/*BLOG > POST > ASIDE*/
+main.post aside {
+    margin-top:50px;
 }
 /*BLOG > POST > ARTICLES list*/
 section.article-list{
@@ -177,6 +198,7 @@ article .post-body{
     margin-bottom: 80px;
 }
 
+/*use same style article hr.divider*/
 article .post-body hr {
     margin-top:20px;
     width:100px;
