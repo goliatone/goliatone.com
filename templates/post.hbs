@@ -7,13 +7,14 @@
     <!-- @POST CONTENTS -->
     <article>
         {{{contents}}}
+        <hr class="divider"/>
     </article>
     <!-- @POST CONTENTS END -->
 
     {{#if this.tags}}
     <div class="post-meta">
         <p>
-            under
+            Found under:
             {{#each this.tags}}
                 <span class="label label-light blog-list-tag">
                     <a href="/blog/tags/{{this}}" alt="{{ this }}" title="{{ this }}">{{this}}</a>
