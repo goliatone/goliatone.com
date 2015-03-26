@@ -77,7 +77,7 @@ hr.divider {
     margin-top:30px;
     margin-bottom:50px;
     width:100px;
-    border-bottom:0px;    
+    border-bottom:0px;
 }
 /*BLOG > POST > META*/
 .post-meta{
@@ -145,28 +145,44 @@ section.article-list li a{
 
 
 /*GLOBAL FOOTER*/
-footer nav ul, 
+footer nav ul,
 footer nav ol {
     list-style-type: none;
-    text-align: right;
+    -webkit-padding-start:0;
+    -moz-padding-start: 0px;    
+    -khtml-padding-start: 0px;
+    -o-padding-start: 0px;
+     padding-start: 0px;
+     padding: 0px;
+/*     text-align: right; */
 }
 
 footer nav li {
     display: inline;
-    margin-left:5px;
+/*     margin-left:5px; */
     text-transform: capitalize;
-    font-size:0.98em;
-    padding:7px 10px;
+    font-size:0.928em;
 }
 
-footer nav li:hover {
+/* footer nav li:hover {
     background-color:#ff3366;
+} */
+footer nav li > a{
+    padding:4px 3px;
 }
-
 footer nav li:hover > a,
 footer nav li > a:hover {
     text-decoration:none;
     color:#fff;
+    background-color:#ff3366;    
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
 }
 
 *{
