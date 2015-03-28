@@ -226,12 +226,24 @@ body{
     max-width: 100%;
     margin: 0;    
 }
+
 footer{
 	max-width:49%;
 	margin: 60px 27% 0
 }
+
+header.instag{
+	margin-left:160px;
+	margin-top:71px;
+}
+header.instag{
+	font-size:2em;
+}
+header.instag h1{
+	margin-bottom:0px;
+}
 main.instag{
-    margin-top: 170px;
+    margin-top: 100px;
     margin-left:13px
 }
 
