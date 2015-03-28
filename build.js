@@ -13,8 +13,12 @@ var each = require('metalsmith-each');
 var css = require('metalsmith-clean-css');
 var highlight = require('highlight.js');
 
+var compress = require('metalsmith-gzip');
+
 var watch = require('metalsmith-watch');
 var serve = require('metalsmith-serve');
+
+
 
 require('./lib/hbs-partials')({
     partials:'_partials'
@@ -135,7 +139,7 @@ Librarian(__dirname)
         port: 9494,
         verbose: true
     }))
-
+    // .use(compress())
     .clean(true)
     .destination('./site')
     .build(function(err){
