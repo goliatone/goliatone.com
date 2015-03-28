@@ -8,9 +8,10 @@ node deploy.js -d ./site/ -b 'goliatone.com' -c ./.secrets.json
 ### TODO
 - Include assets from template metadata
 - Default templates per collections: post => post.hbs
-- Refactor CSS, move style from body to wrapper
+- ~~Refactor CSS, move style from body to wrapper~~
 - slug: Figure out how to handle special characters
 - Handlebars helper: slice, filter out by current title
+- Asset pipeline: pick up CSS from content and compress, same with JS
 
 BUGS:
 - feed gets included inside permalink folders
