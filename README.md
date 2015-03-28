@@ -2,8 +2,9 @@
 
 Source code for goliatone.com, WIP!
 
-
+```
 node deploy.js -d ./site/ -b 'goliatone.com' -c ./.secrets.json
+```
 
 ### TODO
 - Include assets from template metadata
@@ -12,6 +13,8 @@ node deploy.js -d ./site/ -b 'goliatone.com' -c ./.secrets.json
 - slug: Figure out how to handle special characters
 - Handlebars helper: slice, filter out by current title
 - Asset pipeline: pick up CSS from content and compress, same with JS
+- instaG: do it for realz!
+- fix tags in tag archive page, link same as in actual tag page.
 
 BUGS:
 - feed gets included inside permalink folders
