@@ -8,17 +8,19 @@
     <button class="load-more">Load More</button>
 </main>
 {{>footer}}
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://rawgit.com/michael-lynch/instagram-lite/master/src/instagramLite.js"></script>
+
 <script type="text/javascript">
     $(function(){
-$('.instagram-lite').instagramLite({
-    clientID: 'd70f85c4b53c45318456d0eb6ede785a',
-    username: 'goliatone',
-    list: true,
-    limit : 21,
-    loadMore: '.load-more'
-});
+        $('.instagram-lite').instagramLite({
+            clientID: 'd70f85c4b53c45318456d0eb6ede785a',
+            username: 'goliatone',
+            list: true,
+            limit : 21,
+            loadMore: '.load-more'
+        });
 });
 </script>
 {{>html-end}}
