@@ -1,6 +1,6 @@
 ---
 date: 2015-03-24
-title: Setting up node.js on Arduino Yún
+title: Setting up node.js on Arduino Yun
 tags: arduino, "arduino-yun", nodejs
 template: post.hbs
 ---
