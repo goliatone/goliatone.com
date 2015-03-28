@@ -33,20 +33,16 @@
     </div>
 </div> --}}
 
-<div class="container">
-    <div class="row">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                {{#each collections.blog.pinned}}
-                    {{> posts-list-item }}
-                {{/each}}
-                <p class="text-center">
-                    <a class="btn btn-lg btn-info-custom" onclick="ga('send', 'event', 'index:my-posts-btn', 'clicked');"
-                       href="/blog/"><h4>Go to the blog</h4></a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<main class="site">
+    <article>
+        {{#each collections.blog.pinned}}
+            {{> posts-list-item }}
+        {{/each}}
+        <p class="text-center">
+            <a class="btn btn-lg btn-info-custom" onclick="ga('send', 'event', 'index:my-posts-btn', 'clicked');"
+               href="/blog/"><h4>Go to the blog</h4></a>
+        </p>
+    </article>
+</main>
 
 {{> footer }}
