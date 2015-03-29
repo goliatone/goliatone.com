@@ -3,7 +3,8 @@
 Source code for goliatone.com, WIP!
 
 ```
-node deploy.js -d ./site/ -b 'goliatone.com' -c ./.secrets.json
+./tasks/compress
+./tasks/s3up -d ./deploy/ -b 'goliatone.com' -c ./.secrets.json
 ```
 
 ### TODO
@@ -20,6 +21,7 @@ BUGS:
 - feed gets included inside permalink folders
 - longDate: displayed hours do not match this universe
 - feed: archive links do not point to site with full URL!!
+- Assets should be moved from public to site, so that favicon is in root.
 
 ## License
 Copyright (c) 2015 goliatone  
