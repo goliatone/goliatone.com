@@ -1,7 +1,7 @@
 ---
 title: Installing node.js in a Raspberry Pi
 date: 2015-03-23
-tags: node, "raspberry-pi", rsp, arm
+tags: node, raspberry-pi, rsp, arm
 template: post.hbs
 ---
 
