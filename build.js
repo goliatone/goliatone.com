@@ -10,7 +10,7 @@ var define = require('metalsmith-define');
 var appendMetadata = require('./lib/appendMetadata');
 var assets = require('metalsmith-assets');
 var each = require('metalsmith-each');
-var css = require('metalsmith-clean-css');
+// var css = require('metalsmith-clean-css');
 var highlight = require('highlight.js');
 
 var compress = require('metalsmith-gzip');
@@ -58,7 +58,7 @@ Librarian(__dirname)
             description: "Goliatone blog on technology and rumbles"
         },
         uri:"http://goliatone.com",
-        googleAnalytics:'UX-1234567-A'
+        googleAnalytics:'UA-27075690-1'
     })
     .use(each(function(file, filename){
         if(filename.indexOf('txt') !== -1) return filename.replace('txt', 'md');
@@ -124,12 +124,12 @@ Librarian(__dirname)
         destination: './assets'
     }))
 
-    .use(css({
-        files: '**/*.css',
-        cleanCSS: {
-            rebase: true
-        }
-    }))
+    // .use(css({
+    //     files: '**/*.css',
+    //     cleanCSS: {
+    //         rebase: true
+    //     }
+    // }))
 
     // .use(watch({
     //     pattern : '**/*',
