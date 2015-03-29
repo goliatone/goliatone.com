@@ -1,38 +1,5 @@
 {{> header}}
 {{> header-title}}
-{{!-- <div class="section-title">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2" id="remind-me-sms">
-                <h2 class="project-title-header text-center text-uppercase">
-                    My Latest Project
-                </h2>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-{{!-- <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 blog-list">
-            {{#each collections.projects}}
-                {{#if @first}}
-                    <h1 class="text-center text-capitalize">
-                        <a href="{{ this.promo_link }}"
-                           alt="{{ this.promo_title}}"
-                           title="{{ this.promo_title}}">{{ this.promo_title }}</a>
-                    </h1>
-                    <img class="img-responsive" src="{{ this.promo_image }}" alt="{{{ this.promo_title }}}"/>
-                {{/if}}
-            {{/each}}
-            <p class="text-center v-md">
-                <a class="btn btn-lg btn-info-custom" onclick="ga('send', 'event', 'index:my-projects-btn', 'clicked');"
-                   href="/projects/#scroll-top">Check my other projects &rarr;</a>
-            </p>
-        </div>
-    </div>
-</div> --}}
-
 <main class="site">
     <article>
         {{#each collections.blog.pinned}}
