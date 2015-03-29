@@ -1,7 +1,7 @@
 ---
 date: 2015-03-24
 title: Nano and Arduino Yún
-tags: arduino, "arduino-yun", hardware
+tags: arduino, arduino-yun, hardware
 template: post.hbs
 ---
 
