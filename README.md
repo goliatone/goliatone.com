@@ -23,6 +23,10 @@ BUGS:
 - feed: archive links do not point to site with full URL!!
 - Assets should be moved from public to site, so that favicon is in root.
 
+PLUGIN:
+- Tag detection a la wordpress
+    + Flickr image credit/data
+
 ## License
 Copyright (c) 2015 goliatone  
 Licensed under the MIT license.
