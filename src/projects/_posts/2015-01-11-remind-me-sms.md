@@ -3,7 +3,7 @@ template: project/post/index.hbs
 skip_index: false
 
 date: 2015-01-11
-title: "This is a simple project example"
+title: "Remind me SMS"
 
 promo_link: "http://github.com/goliatone/gpub"
 promo_title: "GPub: Simple pus/sub library"
