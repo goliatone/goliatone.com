@@ -7,7 +7,6 @@ If we have the need to load a javascript library from our flash application, we 
 
 We can use this `JSLibraryLoader` as an example of what we can do if we build on top of a simple class taking care of one specific concern. We are going to build on top of the StringTemplate class introduced in a [previous note](/blog/2011/08/06/as3-stringtemplate-class/).
 
-```actionscript
     package com.skinnygeek.js.libraries {
 	import com.skinnygeek.js.JS;
 	import com.skinnygeek.logging.Logger;
@@ -121,4 +120,3 @@ We can use this `JSLibraryLoader` as an example of what we can do if we build on
 	}
 
     }
-```

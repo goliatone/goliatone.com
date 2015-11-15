@@ -9,11 +9,9 @@ Connection will fail, and you will get no error messages what so ever.
 
 One quick solution would be to use a class that would hold constants with the parameters names.
 
-```php
-<?php
     class ModuleConfig {
          const PARAMETER_NAME = 'parameter-name';
     }
     
     $option = Kohana::config(ModuleConfig::PARAMETER_NAME);
-```
+

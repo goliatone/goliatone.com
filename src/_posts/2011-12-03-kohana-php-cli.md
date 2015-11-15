@@ -14,12 +14,9 @@ So, in a clean kohana install you can try to execute from your application's roo
 
 If you get an `ErrorException` that says `Undefined index: SERVER_NAME ~ SYSPATH\classes\kohana\url.php` that is because the class relies on `$_SERVER['SERVER_NAME']` which is not set in CLI mode. The fix is to initialize kohana with the full base_url:
 
-```php
-<?php
     Kohana::init(array(	
     	'base_url'   => 'http://localhost/kohana/'
     ...
-```
 
 If you now execute `php index.php --uri=welcome` it should output the controllers response body: `'hello, world!'`
 
