@@ -1,5 +1,8 @@
+#!/usr/bin/env node
+
 var Librarian = require('lbr');
 
+var VError = require('verror');
 var collections = require('metalsmith-collections');
 var tags = require('metalsmith-tags');
 var markdown = require('metalsmith-markdown');
@@ -50,7 +53,6 @@ Librarian(__dirname)
         },
         // moment: moment
     }))
-
     .metadata({
         site: {
             title: "Notes",
@@ -144,5 +146,6 @@ Librarian(__dirname)
     .destination('./site')
     .build(function(err){
         if(err) throw err;
+        // if(err) throw new VError(err);
     });
 }
